@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Snake\CubicSnakeSceneSetUp.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\Snake\SnakeLogic.cs" />
     <Compile Include="Assets\Scripts\Snake\TopViewMovement.cs" />
     <Compile Include="Assets\Prefabs\Controllers\MobileController.cs" />
   </ItemGroup>

@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 8183272947613590132}
   - component: {fileID: 4735486722848130575}
   - component: {fileID: 6656549258558422439}
+  - component: {fileID: 2127500773345573425}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -540,6 +541,27 @@ MonoBehaviour:
   moveControl: {fileID: -6815170063331175903, guid: 906d4a938c9108748bcf8ab327858356, type: 3}
   speed: 1
   pause: 100
+--- !u!65 &2127500773345573425
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095206897496289280}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.58, z: 1.3}
+  m_Center: {x: 0, y: 0.82, z: 0.14}
 --- !u!1 &9022418284789873309
 GameObject:
   m_ObjectHideFlags: 0
