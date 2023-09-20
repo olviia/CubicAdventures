@@ -77,12 +77,6 @@ public class CubicSnakeSceneSetUp : MonoBehaviour {
         fieldInUnit[2] = new Vector3((screenWidth / 2 - wallsMargins - pixelsInUnit) / pixelsInUnit, 0f, -(fieldHeight / 2 - wallsMargins - pixelsInUnit) / pixelsInUnit);
         fieldInUnit[3] = new Vector3(-(screenWidth / 2 - wallsMargins - pixelsInUnit) / pixelsInUnit, 0f, -(fieldHeight / 2 - wallsMargins - pixelsInUnit) / pixelsInUnit);
 
-        Debug.Log(fieldInUnit[0]);
-        Debug.Log(fieldInUnit[1]);
-        Debug.Log(fieldInUnit[2]);
-        Debug.Log(fieldInUnit[3]);
-
-
     }
 
     // Update is called once per frame
