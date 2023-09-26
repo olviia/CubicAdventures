@@ -7,6 +7,6 @@ public class ScoreUpdate : MonoBehaviour
 {
     // Update is called once per frame
     void Update() {
-         GetComponent<TextMeshProUGUI>().text = SnakeLogic.GetScore().ToString();
+         GetComponent<TextMeshProUGUI>().text = TopViewMovement.GetScore().ToString();
     }
 }

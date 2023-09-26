@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Snake\SnakeLogic.cs" />
     <Compile Include="Assets\Scripts\Snake\TopViewMovement.cs" />
     <Compile Include="Assets\Prefabs\Controllers\MobileController.cs" />
+    <Compile Include="Assets\Scripts\Snake\BodyManager.cs" />
+    <Compile Include="Assets\Scripts\Snake\BodyPart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

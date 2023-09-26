@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class TopViewMovement : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private InputActionReference moveControl;
     [SerializeField] private float speed = 1f;
+    [SerializeField] private float distance;
 
     private float angle;
-    private Vector3 keyDirection;
-    private static string collidedObject;
+    private Vector3 keyDirection; 
+    private static int score;
     float moveX;
     float moveZ;
 
@@ -24,19 +26,45 @@ public class TopViewMovement : MonoBehaviour
     }
 
 
-    // rewrite static and not staic
     void Update()
     {
 
-        if (!SnakeLogic.IsGameFinished()) {
+        if (!SnakeLogic.isGameFinished) {
             Moving();
         }
 
     }
     private void OnControllerColliderHit(ControllerColliderHit hit) {
-        collidedObject = hit.collider.gameObject.name;
-        SnakeLogic.CheckCollision(collidedObject);
-        Debug.Log(collidedObject); 
+        GameObject collidedObject = hit.collider.gameObject;
+        CheckCollision(collidedObject, gameObject);
+    }
+    private void OnCollisionEnter(Collision collision) {
+        //define collision
+/*        if (collision != null && collision.contact.name.Contains("Body")) {
+            SnakeLogic.isGameFinished = true;
+        }*/
+    }
+    private void CheckCollision(GameObject collidedObject, GameObject player) {
+
+        if (collidedObject != null && collidedObject.name.Contains("Wall")) {
+            SnakeLogic.isGameFinished = true;
+        } else if (collidedObject != null && collidedObject.name.Contains("Cube")) {
+            onElementCollide(collidedObject, player);
+        }
+    }
+
+    private void onElementCollide(GameObject collidedObject, GameObject player) {
+
+
+        collidedObject.transform.parent.position = -player.transform.forward * distance + player.transform.position;
+        collidedObject.transform.parent.rotation = player.transform.rotation;
+        collidedObject.name = "Body";
+
+        BodyPart.UpdateBodyPartList(collidedObject);
+
+        SnakeLogic.noElements = true;
+        SnakeLogic.isGameFinished = false;
+        UpdateScore();
 
     }
 
@@ -59,5 +87,16 @@ public class TopViewMovement : MonoBehaviour
         controller.SimpleMove(keyDirection * speed);
         
     }
+
+    public static int GetScore() {
+        return score;
+    }
+    public static void SetScore(int a) {
+        score = a;
+    }
+    public static void UpdateScore() {
+        score++;
+    }
+
 
 }

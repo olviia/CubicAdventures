@@ -8,12 +8,12 @@ public class SnakeLogic : MonoBehaviour
 
     [SerializeField] private GameObject element;
 
-    private static int score;
+
     private void Start() {
     }
 
-    private static bool noElements = true;
-    private static bool isGameFinished = false;
+    public static bool noElements = true;
+    public static bool isGameFinished = false;
 
     // Update is called once per frame
     void Update()
@@ -22,27 +22,7 @@ public class SnakeLogic : MonoBehaviour
             if (noElements) {
                 generateElement();
             }
-        } else {
-            FinishGame();
         }
-    }
-
-    private void FinishGame() {
-        //open finish game popup
-    }
-
-    public static void CheckCollision(string collidedObject) {
-
-        if (collidedObject != null && collidedObject.Contains("Wall")) {
-            EndGame();
-        } else if (collidedObject != null && collidedObject.Contains("Cube")) {
-            onElementCollide();
-        }
-    }
-
-
-    private static void EndGame() {
-        isGameFinished = true;
     }
 
     public void generateElement() {
@@ -59,23 +39,6 @@ public class SnakeLogic : MonoBehaviour
         }
 
 
-    }
-    private static void onElementCollide() {
-        noElements = true;
-        UpdateScore();
-
-    }
-    public static int GetScore() { 
-        return score;
-    }    
-    public static void SetScore(int a) {
-        score = a;
-    }
-    public static void UpdateScore() {
-        score++;
-    }
-    public static bool IsGameFinished() {
-        return isGameFinished;
     }
 
 

@@ -1922,6 +1922,10 @@ PrefabInstance:
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6656549258558422439, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
+      propertyPath: distance
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7095206897496289280, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1932,7 +1936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8183272947613590132, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Radius
-      value: 0.95
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 8183272947613590132, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Enabled
