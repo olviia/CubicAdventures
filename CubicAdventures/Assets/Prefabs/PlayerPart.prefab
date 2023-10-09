@@ -13,6 +13,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2127500773345573425, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127500773345573425, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
@@ -30,6 +34,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2127500773345573425, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127500773345573425, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
+      propertyPath: m_ProvidesContacts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5245370705258008225, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
@@ -78,9 +86,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095206897496289280, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Name
-      value: PlayerBody
+      value: PlayerPart
       objectReference: {fileID: 0}
     - target: {fileID: 7352594294147859224, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183272947613590132, guid: dd0c5ba7d430b3e40b71db248adc464f, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}

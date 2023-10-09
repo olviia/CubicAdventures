@@ -95,7 +95,7 @@
                     "name": "Buttons",
                     "id": "09240255-9b08-4f42-bcb3-df769c065b66",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Press,Hold",
                     "processors": "",
                     "groups": "",
                     "action": "Move",

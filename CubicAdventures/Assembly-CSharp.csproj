@@ -60,11 +60,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Snake\ScoreUpdate.cs" />
     <Compile Include="Assets\Scripts\Snake\CubicSnakeSceneSetUp.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ScoreList.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ButtonsManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\ButtonsInGameManager.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
     <Compile Include="Assets\Scripts\Snake\SnakeLogic.cs" />
     <Compile Include="Assets\Scripts\Snake\TopViewMovement.cs" />
     <Compile Include="Assets\Prefabs\Controllers\MobileController.cs" />
-    <Compile Include="Assets\Scripts\Snake\BodyManager.cs" />
     <Compile Include="Assets\Scripts\Snake\BodyPart.cs" />
   </ItemGroup>
   <ItemGroup>

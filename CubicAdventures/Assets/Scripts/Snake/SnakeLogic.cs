@@ -7,13 +7,17 @@ public class SnakeLogic : MonoBehaviour
 {
 
     [SerializeField] private GameObject element;
+    [SerializeField] private GameObject finishPopUp;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
 
+    public static bool noElements;
+    public static bool isGameFinished;
     private void Start() {
-    }
+     noElements = true;
+    isGameFinished = false;
+}
 
-    public static bool noElements = true;
-    public static bool isGameFinished = false;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +26,11 @@ public class SnakeLogic : MonoBehaviour
             if (noElements) {
                 generateElement();
             }
+        } else if (!finishPopUp.activeSelf) {
+            finishPopUp.SetActive(true);
+            float score = TopViewMovement.GetScore();
+            scoreText.text += "\n" + score;
+            ScoreList.ScoreUpdate(score);
         }
     }
 
@@ -37,8 +46,6 @@ public class SnakeLogic : MonoBehaviour
         } else {
             generateElement();
         }
-
-
     }
 
 

@@ -481,7 +481,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 0
-  m_Radius: 0.78
+  m_Radius: 0.43
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -540,7 +540,7 @@ MonoBehaviour:
   controller: {fileID: 8183272947613590132}
   moveControl: {fileID: -6815170063331175903, guid: 906d4a938c9108748bcf8ab327858356, type: 3}
   speed: 1
-  pause: 100
+  distance: 0
 --- !u!65 &2127500773345573425
 BoxCollider:
   m_ObjectHideFlags: 0
